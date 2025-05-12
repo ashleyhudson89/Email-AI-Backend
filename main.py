@@ -33,7 +33,7 @@ async def generate_email(request: EmailRequest):
 
     try:
         response = openai.ChatCompletion.create(
-            model="gpt-4",
+            model="gpt-3.5-turbo",
             messages=[
                 {"role": "system", "content": "You are a helpful outbound email generator."},
                 {"role": "user", "content": prompt},
